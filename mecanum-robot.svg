@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Inter,Arial,sans-serif">
+<defs>
+<pattern id="a" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#1d2024"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c5e063" stroke-opacity=".7" stroke-width="3"/></pattern>
+<pattern id="b" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><rect width="10" height="10" fill="#1d2024"/><line x1="0" y1="0" x2="0" y2="10" stroke="#c5e063" stroke-opacity=".7" stroke-width="3"/></pattern>
+<pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#25282d" stroke-width="1"/></pattern>
+<marker id="m" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#c5e063"/></marker>
+</defs>
+<rect width="800" height="500" fill="#16181b"/><rect width="800" height="500" fill="url(#g)"/>
+<g stroke="#c5e063" stroke-width="2">
+<rect x="262" y="112" width="44" height="92" rx="6" fill="url(#a)"/>
+<rect x="494" y="112" width="44" height="92" rx="6" fill="url(#b)"/>
+<rect x="262" y="296" width="44" height="92" rx="6" fill="url(#b)"/>
+<rect x="494" y="296" width="44" height="92" rx="6" fill="url(#a)"/>
+<rect x="320" y="130" width="160" height="240" rx="14" fill="#0e0f11"/>
+<circle cx="400" cy="250" r="34" fill="none" stroke-opacity=".5"/>
+<path d="M400 216v68M366 250h68" stroke-opacity=".4" stroke-dasharray="5 5"/>
+</g>
+<path d="M306 158h14M306 342h14M480 158h14M480 342h14" stroke="#8d9199" stroke-width="2"/>
+<g stroke="#c5e063" stroke-width="2.5" marker-end="url(#m)" fill="none">
+<path d="M640 250v-70"/><path d="M640 250v70"/><path d="M640 250h-70"/><path d="M640 250h70"/>
+<path d="M640 250l-50-50"/><path d="M640 250l50-50"/><path d="M640 250l-50 50"/><path d="M640 250l50 50"/>
+</g>
+<g fill="#8d9199" font-size="13"><text x="640" y="400" text-anchor="middle">Omnidirectional motion</text>
+<text x="400" y="440" text-anchor="middle">Mecanum chassis · top view (schematic)</text>
+<text x="110" y="260">4 × mecanum wheels</text><text x="110" y="282">independent motor drive</text></g>
+</svg>

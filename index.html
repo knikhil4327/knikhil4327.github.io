@@ -56,7 +56,7 @@ h2{font-size:clamp(28px,4.4vw,40px);margin-bottom:36px}
 .card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-align:left;color:inherit;font:inherit;padding:0;cursor:pointer;transition:border-color .2s,transform .2s}
 .card:hover{border-color:var(--acc);transform:translateY(-3px)}
 .thumb{aspect-ratio:16/10;background:repeating-linear-gradient(45deg,#1b1e22 0 12px,#17191c 12px 24px);display:grid;place-items:center;color:var(--mute);font-size:13px;border-bottom:1px solid var(--line)}
-.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb img{width:100%;height:100%;object-fit:cover}.thumb img{object-position:top}.thumb img[src$='.svg']{object-fit:contain}.shots .thumb{aspect-ratio:3/4;overflow:hidden}.frame img{object-position:50% 15%}
 .cb{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .num{font-size:12px;color:var(--mute);letter-spacing:.12em}
 .cb h3{font-size:22px}.cb p{margin:0;color:var(--mute);font-size:15px}
@@ -104,12 +104,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
 </div></section>
 
 <section id="about"><div class="wrap">
-<p class="eyebrow">About</p><h2>Engineering across disciplines.</h2>
+<p class="eyebrow">About</p><h2>A student who learns by building.</h2>
 <div class="about" id="aboutBox"></div>
 </div></section>
 
 <section id="projects"><div class="wrap">
-<p class="eyebrow">Featured Projects</p><h2>Selected projects and practical work.</h2>
+<p class="eyebrow">Featured Projects</p><h2>Three things I’m working on and learning from.</h2>
 <div class="cards" id="cards"></div>
 </div></section>
 
@@ -119,12 +119,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
 </div></section>
 
 <section id="education"><div class="wrap">
-<p class="eyebrow">Education &amp; Certifications</p><h2>Education and selected certifications.</h2>
+<p class="eyebrow">Education &amp; Certifications</p><h2>Where I’m studying.</h2>
 <div class="tl" id="tl"></div>
 </div></section>
 
 <section id="activities"><div class="wrap">
-<p class="eyebrow">Activities &amp; Experience</p><h2>Leadership, memberships and technical activities.</h2>
+<p class="eyebrow">Activities &amp; Experience</p><h2>Beyond the classroom.</h2>
 <div class="tl" id="act"></div>
 <div class="soon" id="soon"></div>
 </div></section>
@@ -144,52 +144,55 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
 const SITE = {
   name: "Nikhil K",
   headline: ["Engineering.", "Technology.", "Business."],
-  intro: "Mechanical Engineering student exploring product development across mechanical design, electronics and software, with a strong interest in how technology becomes practical solutions and viable businesses.",
+  intro: "I’m a Mechanical Engineering student interested in building practical solutions at the intersection of engineering, technology and business.",
   email: "k.nikhil4327@gmail.com",
   linkedin: "https://linkedin.com/in/nikhil-k-83ba7a367",
   github: "https://github.com/knikhil4327",
-  resume: "assets/resume.pdf",
-  photo: "",
+  resume: "assets/resume.pdf",   // replace assets/resume.pdf with your own PDF
+  photo: "assets/profile.jpg",
   about: [
-    "I’m pursuing a B.E. in Mechanical Engineering at Rajalakshmi Institute of Technology, Chennai. My interests extend across mechanical design, robotics, electronics and software, and I’m keen to understand how these disciplines come together in real-world products.",
-    "Through academic projects and independent development, I’ve explored CAD, embedded systems, programming and application development. I enjoy approaching problems from both an engineering and user perspective — understanding the need, evaluating practical constraints and working towards a useful solution.",
-    "I’m also interested in entrepreneurship, business strategy and operations. My goal is to keep building a broad, practical skill set while learning from collaborative projects, industry experience and opportunities to create value."
+    "I’m a Mechanical Engineering student at Rajalakshmi Institute of Technology, Chennai, still early in my journey and keen to learn by making things.",
+    "Mechanical design is my foundation, but real products need more than one discipline. Alongside CAD and engineering fundamentals, I’ve been learning Python, electronics, robotics and AI, and putting them to work in projects such as a mecanum wheel robot and a full-stack medicine-finding app.",
+    "I’m curious about how products and businesses come together, and I’d like to build ventures that solve overlooked everyday problems. I learn best hands-on and I’m happy to pick up a new discipline when a project needs it. I speak English, Tamil and Hindi, with a little German."
   ],
   projects: [
-    { id:"mecanum", title:"Mecanum Wheel Robot – Autonomous Navigation System", status:"Completed", image:"https://dfimg.dfrobot.com/60d05dcfaa9508d63a414990/community/92e0dbbe2e90d09ff3fcbaa75a9229f5.jpg",
-      blurb:"A four-wheeled mecanum robot developed through the IIT Madras Electronic Systems certification course.",
-      about:"Designed and developed a four-wheeled mecanum robot as part of the Electronic Systems certification course from IIT Madras. The project brought together SolidWorks CAD modelling, embedded electronics and motor-control concepts to demonstrate omnidirectional movement, autonomous navigation and obstacle avoidance. The image shown is a representative mecanum-robot reference, not a photograph of the project prototype.",
-      focus:["SolidWorks CAD modelling","Embedded electronics integration","Motor control","Omnidirectional movement","Autonomous navigation and obstacle avoidance"] },
-    { id:"medfinder", title:"MedFinder", status:"In Development", image:"",
-      blurb:"A medicine availability platform connecting patients with local pharmacies and helping address medicine shortages.",
-      about:"MedFinder is a full-stack application concept focused on connecting patients with local pharmacies that have required medicines in stock. Core application coding and the MySQL database have been completed; the wider application is still under development. The planned workflow includes medicine availability discovery, pharmacy inventory updates and shortage visibility.",
-      focus:["Flutter application development","MySQL database design","Pharmacy and patient connectivity","Medicine inventory and availability","Shortage monitoring"] },
-    { id:"swagat", title:"Swagat Collections", status:"Prototype", image:"",
-      blurb:"An e-commerce website prototype for a Chennai-based luxury jewellery and accessories boutique.",
-      about:"Designed and developed a functional e-commerce prototype for a Chennai-based luxury jewellery and accessories boutique. The work explored responsive user experience, product catalogue presentation, search and filtering. It remains a prototype and has not been publicly launched.",
-      focus:["Responsive interface design","Product catalogue presentation","Search and filtering","E-commerce experience"] }
+    { id:"medfinder", title:"MedFinder", status:"In Development", image:"assets/projects/medfinder-1.jpg",
+      shots:["assets/projects/medfinder-1.jpg","assets/projects/medfinder-2.jpg"],
+      blurb:"A real-time medicine availability platform connecting local pharmacies and patients in Chennai.",
+      about:"Finding one particular medicine can mean calling or visiting several pharmacies. MedFinder is a full-stack application I’m building to show what is in stock nearby and flag shortages, so patients can find and book medicines with less running around. It is still under development.",
+      focus:["Real-time availability and shortage monitoring","Responsive user interface","Backend architecture and database systems","Inventory tracking and medicine booking"] },
+    { id:"mecanum", title:"Mecanum Wheel Robot", status:"Completed", image:"assets/projects/mecanum-robot.svg",
+      shots:["assets/projects/mecanum-robot.svg"], shotsLabel:"Illustration",
+      blurb:"A four-wheeled mecanum robot with autonomous navigation, built during the IIT Madras Electronic Systems course.",
+      about:"Designed and built as part of the Electronic Systems certification course from IIT Madras. I modelled the robot in SolidWorks and integrated the embedded electronics and motor control. It demonstrated omnidirectional movement, autonomous navigation and obstacle avoidance.",
+      focus:["SolidWorks CAD modelling","Embedded electronics","Motor control","Omnidirectional movement","Autonomous navigation and obstacle avoidance"] },
+    { id:"swagat", title:"Swagat Collections", status:"Prototype", image:"assets/projects/swagat-1.jpg",
+      shots:["assets/projects/swagat-2.jpg","assets/projects/swagat-3.jpg"],
+      blurb:"A functional e-commerce prototype for a Chennai-based luxury jewellery and accessories boutique.",
+      about:"A prototype storefront for oxidised and gold-plated jewellery, return gifts and accessories. I focused on how products are presented and found, with a responsive interface, a managed product catalogue, search and filtering. It is a prototype rather than a live store.",
+      focus:["Responsive interface design","Product catalogue management","Search and filtering","Brand and product presentation"] }
   ],
   skills: {
-    "Mechanical Engineering & CAD":["SolidWorks","Autodesk Fusion 360","AutoCAD","Mechanical Design","CNC"],
-    "Engineering Fundamentals":["Thermodynamics","Fluid Mechanics","Heat Transfer","Manufacturing Processes"],
-    "Programming & Data":["Python","SQL","C","NumPy","Pandas","Matplotlib"],
-    "AI & Technology":["Artificial Intelligence","Robotics","Electronics","Full-Stack Development","Prompt Engineering"]
+    Engineering:["SolidWorks","Autodesk Fusion 360","AutoCAD","CNC with Fusion 360","Mechanical design","Thermodynamics","Fluid mechanics","Heat transfer","Manufacturing processes"],
+    Technology:["Python","SQL","C","NumPy","Pandas","Matplotlib","Embedded electronics","Robotics","Artificial intelligence","Full-stack development","Prompt engineering"],
+    Business:["Project management","Leadership","Team collaboration","Problem-solving","Entrepreneurial mindset","Product development"]
   },
   education: [
-    { when:"2025 – 2029", title:"B.E. Mechanical Engineering", where:"Rajalakshmi Institute of Technology, Chennai · Anna University" },
-    { when:"Certification", title:"Electronic Systems", where:"Code IIT Madras" },
-    { when:"Certification", title:"Steam Power Engineering", where:"NPTEL" },
-    { when:"Certification", title:"I’m AI Sashakt", where:"IndiaAI" }
+    { when:"2025 – 2029", title:"B.E. Mechanical Engineering", where:"Rajalakshmi Institute of Technology (Anna University), Chennai" },
+    { when:"Oct 2026", title:"Steam Power Engineering", where:"NPTEL" },
+    { when:"Nov 2025", title:"Introduction to CNC with Fusion 360", where:"Skyy Skill Academy" },
+    { when:"Oct 2024", title:"Electronic Systems", where:"Code IIT Madras" },
+    { when:"Programming & AI", title:"Short courses", where:"I’m AI Sashakt (IndiaAI) · C Programming (Spoken Tutorial, IIT Bombay) · Level Up: C Programming (LinkedIn Learning) · Python Programming Fundamentals (SoloLearn)" }
   ],
   activities: [
-    { when:"Membership", title:"Society of Automotive Engineers (SAE)", where:"Member · Chennai" },
-    { when:"Membership", title:"Green Engineering Club", where:"Member · Rajalakshmi Institute of Technology" },
-    { when:"Team Leadership", title:"Expedition 404 (T.A.L.O.S)", where:"Team Lead · Chennai Institute of Technology" },
-    { when:"Recognition", title:"Best Event Conducted Award", where:"The Institution of Green Engineers" },
-    { when:"Technical Event", title:"Techritz 2025 – LogoClash", where:"Rajalakshmi Institute of Technology" },
-    { when:"Robotics Event", title:"Roboyudh 2026 – Line Following Robot", where:"Sathyabama Institute of Science and Technology" }
+    { when:"Team Lead", title:"Expedition 404 (T.A.L.O.S)", where:"Chennai Institute of Technology." },
+    { when:"Member", title:"Society of Automotive Engineers, Chennai", where:"Member." },
+    { when:"Member", title:"The Institution of Green Engineers", where:"Rajalakshmi Institute of Technology." },
+    { when:"Award", title:"Best Event Conducted Award", where:"The Institution of Green Engineers." },
+    { when:"Event", title:"Techritz 2025 – LogoClash", where:"Rajalakshmi Institute of Technology." },
+    { when:"Event", title:"Roboyudh 2026 – Line Following Robot", where:"Sathyabama Institute of Technology." }
   ],
-  activitiesNote: ""
+  activitiesNote: "Internships and professional experience will be added here as they happen."
 };
 /* ================================================ */
 
@@ -224,10 +227,12 @@ const dlg=$("dlg");
 $("cards").addEventListener("click",e=>{
   const b=e.target.closest(".card");if(!b)return;
   const p=SITE.projects[+b.dataset.i];
+  const sh=(p.shots||[]).map(u=>`<div class="thumb img"><img src="${u}" alt="${p.title} image" loading="lazy"></div>`);
+  while(sh.length<2)sh.push(ph("Image placeholder"));
   $("dBody").innerHTML=`<button class="btn x" id="dClose" aria-label="Close">Close ✕</button>
   <span class="tag">${p.status}</span><h3 id="dTitle">${p.title}</h3><p>${p.about}</p>
   <h4>Focus Areas</h4><ul>${p.focus.map(f=>`<li>${f}</li>`).join("")}</ul>
-  <h4>Screenshots</h4><div class="shots">${ph("Screenshot 1")}${ph("Screenshot 2")}</div>`;
+  <h4>${p.shotsLabel||"Screenshots"}</h4><div class="shots">${sh.join("")}</div>`;
   $("dClose").onclick=()=>dlg.close();
   dlg.showModal();
 });
@@ -240,7 +245,7 @@ $("tl").innerHTML=tl(SITE.education);
 $("act").innerHTML=tl(SITE.activities);
 $("soon").textContent=SITE.activitiesNote;
 
-$("cHead").textContent="Open to conversations about engineering, technology, products and business.";
+$("cHead").textContent="Let’s talk about engineering, products or ideas.";
 $("cBtns").innerHTML=`<a class="btn p" href="mailto:${SITE.email}">Email Me</a><a class="btn" href="${SITE.resume}" download>Download Resume</a>`;
 $("cLinks").innerHTML=[["Email",SITE.email,"mailto:"+SITE.email],["LinkedIn",SITE.linkedin.replace("https://",""),SITE.linkedin],["GitHub",SITE.github.replace("https://",""),SITE.github]]
   .map(([l,t,h])=>`<a href="${h}"${ext(h)}>${l}<span>${t}</span></a>`).join("");

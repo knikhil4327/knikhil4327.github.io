@@ -1,46 +1,18 @@
 # Nikhil K — Portfolio
 
-Personal portfolio website. A single static page: no build step, no dependencies, no API keys.
+Static personal portfolio: no build step, no dependencies, no API keys.
 
-The portfolio content has been updated while preserving the original layout, styling, responsive behaviour, navigation, and project-dialog interactions.
+## Edit content
+Open `index.html` and edit the `SITE` object near the bottom. Text, links, projects, skills, education and activities all live there.
 
-## Edit your content
-
-Open `index.html` and find the `SITE` object near the bottom of the file. Everything (text, links, projects, skills, education, activities) is edited there.
-
-## Replace the placeholders
-
-| What | Where | How |
-| --- | --- | --- |
-| Profile photo | `assets/` | Add `profile.jpg`, then set `photo: "assets/profile.jpg"` in `SITE` |
-| Project images | `assets/projects/` | Add images, then set `image: "assets/projects/medfinder.jpg"` on each project |
-| Resume | `assets/resume.pdf` | Replace the placeholder PDF, keeping the same file name |
-
-Tip: resize photos to about 1200 px wide and compress them (squoosh.app) so the site loads fast.
+## Images
+- `assets/profile.jpg` — profile photo
+- `assets/projects/` — project images (set `image` and `shots` for each project in `SITE`)
+- `assets/resume.pdf` — resume (replace, keep the file name)
+- `assets/projects/mecanum-robot.svg` — illustrative schematic; swap in a photo of your robot when you have one
 
 ## Run locally
+Open `index.html`, or run `python -m http.server 8000` and visit http://localhost:8000.
 
-Open `index.html` in a browser, or run `python -m http.server 8000` in this folder and visit http://localhost:8000.
-
-## Deploy with GitHub Pages
-
-1. Create a new repository on GitHub (for example `knikhil4327.github.io` for a root URL, or `portfolio`).
-2. Upload all files from this folder (or use Git below).
-3. Go to Settings > Pages, choose Deploy from a branch, select `main` and `/ (root)`, then Save.
-4. Your site goes live in a minute or two.
-
-```bash
-git init
-git add .
-git commit -m "Add portfolio website"
-git branch -M main
-git remote add origin https://github.com/knikhil4327/portfolio.git
-git push -u origin main
-```
-
-Netlify Drop and Vercel also work: just drag the folder in.
-
-
-## Image attribution
-
-The Mecanum Wheel Robot card currently uses a representative mecanum-robot reference image from the DFRobot Maker Community article “Build an Arduino Obstacle Avoiding Car with Mecanum Wheels” (https://community.dfrobot.com/makelog-314315.html). It is explicitly described in the project details as a reference image, not the user’s own prototype. Replace it with a project photograph when available.
+## Deploy (GitHub Pages)
+Push all files to `main`, then Settings > Pages > Deploy from branch > `main` / root.
