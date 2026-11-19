@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nikhil K — Engineering. Technology. Business.</title>
+<meta name="description" content="Nikhil K is a Mechanical Engineering student in Chennai building practical solutions at the intersection of engineering, technology and business.">
+<meta name="theme-color" content="#0e0f11">
+<meta property="og:title" content="Nikhil K — Engineering. Technology. Business.">
+<meta property="og:description" content="Mechanical Engineering student exploring engineering, technology and entrepreneurship.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0f11;--bg2:#16181b;--line:#25282d;--text:#ecebe6;--mute:#8d9199;--acc:#c5e063;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(14,15,17,.92);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700;letter-spacing:-.01em}.logo span{color:var(--acc)}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav a{color:var(--mute);font-size:14px;transition:color .2s}nav a:hover{color:var(--text)}
+#menuBtn{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 12px;font:inherit;font-size:14px;cursor:pointer}
+@media(max-width:760px){#menuBtn{display:block}nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--bg);border-bottom:1px solid var(--line)}nav.open{display:block}nav ul{flex-direction:column;gap:0;padding:8px 22px 16px}nav a{display:block;padding:12px 0;font-size:16px}}
+section{padding:96px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin:0 0 14px}
+h1,h2,h3{letter-spacing:-.02em;line-height:1.12;margin:0}
+h2{font-size:clamp(28px,4.4vw,40px);margin-bottom:36px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);cursor:pointer;font-family:inherit;color:var(--text);background:none;transition:border-color .2s,transform .2s}
+.btn:hover{border-color:var(--mute)}.btn.p{background:var(--acc);color:#12140a;border-color:var(--acc)}.btn.p:hover{transform:translateY(-1px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.hero{padding:72px 0 88px;border-top:0}
+.hero .g{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+@media(max-width:860px){.hero .g{grid-template-columns:1fr;gap:40px}}
+.hero h1{font-size:clamp(40px,7.4vw,76px);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--mute)}
+.name{font-size:18px;color:var(--text);margin:0 0 18px;font-weight:500}
+.lead{color:var(--mute);font-size:18px;max-width:520px;margin:24px 0 32px}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.frame{position:relative;aspect-ratio:4/5;max-width:380px;width:100%;margin-left:auto;border:1px solid var(--line);border-radius:18px;background:var(--bg2);overflow:hidden}
+@media(max-width:860px){.frame{margin:0;max-width:300px}}
+.frame svg{position:absolute;inset:0;width:100%;height:100%}
+.frame img{width:100%;height:100%;object-fit:cover;display:block;position:relative}
+.ph{position:absolute;inset:auto 16px 16px 16px;border:1px dashed var(--mute);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--mute);background:rgba(14,15,17,.75)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:24px}}
+.about p{color:var(--mute);margin:0 0 18px}.about p:first-child{color:var(--text);font-size:20px;line-height:1.5}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-align:left;color:inherit;font:inherit;padding:0;cursor:pointer;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--acc);transform:translateY(-3px)}
+.thumb{aspect-ratio:16/10;background:repeating-linear-gradient(45deg,#1b1e22 0 12px,#17191c 12px 24px);display:grid;place-items:center;color:var(--mute);font-size:13px;border-bottom:1px solid var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.cb{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.num{font-size:12px;color:var(--mute);letter-spacing:.12em}
+.cb h3{font-size:22px}.cb p{margin:0;color:var(--mute);font-size:15px}
+.tag{align-self:flex-start;font-size:12px;border:1px solid var(--acc);color:var(--acc);border-radius:99px;padding:3px 10px}
+.more{margin-top:auto;padding-top:8px;font-size:14px;font-weight:600}
+dialog{background:var(--bg2);color:var(--text);border:1px solid var(--line);border-radius:18px;padding:0;width:min(640px,calc(100% - 32px));max-height:calc(100% - 48px)}
+dialog::backdrop{background:rgba(0,0,0,.7)}
+.dc{padding:28px}.dc h3{font-size:28px;margin:10px 0 14px}.dc p{color:var(--mute);margin:0 0 18px}
+.dc h4{margin:22px 0 8px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc)}
+.dc ul{margin:0;padding-left:20px;color:var(--text)}.dc li{margin-bottom:4px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}.shots .thumb{border:1px solid var(--line);border-radius:10px}
+.x{float:right}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:800px){.skills{grid-template-columns:1fr}}
+.sk{border-top:1px solid var(--line);padding-top:18px}.sk h3{font-size:18px;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{border:1px solid var(--line);background:var(--bg2);border-radius:8px;padding:6px 12px;font-size:14px;color:var(--text)}
+.tl{border-left:1px solid var(--line);margin-left:6px}
+.ti{position:relative;padding:0 0 36px 28px}.ti::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--acc)}
+.ti small{color:var(--mute);font-size:13px;letter-spacing:.06em}.ti h3{font-size:20px;margin:4px 0}.ti p{margin:0;color:var(--mute)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}@media(max-width:800px){.two{grid-template-columns:1fr;gap:16px}}
+.soon{border:1px dashed var(--line);border-radius:12px;padding:16px 18px;color:var(--mute);font-size:15px}
+.contact{text-align:left}.contact h2{max-width:640px}
+.links{display:flex;flex-direction:column;border-top:1px solid var(--line);margin-top:36px}
+.links a{display:flex;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid var(--line);transition:color .2s,padding .2s}.links a:hover{color:var(--acc);padding-left:6px}
+.links span{color:var(--mute);font-size:14px;overflow-wrap:anywhere;text-align:right}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#top" aria-label="Nikhil K, home">Nikhil K<span>.</span></a>
+<button id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main"><ul id="navList"></ul></nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap g">
+<div>
+<p class="name" id="hName"></p>
+<h1 id="hHead"></h1>
+<p class="lead" id="hLead"></p>
+<div class="row" id="hBtns"></div>
+</div>
+<div class="frame" id="photo" role="img" aria-label="Profile photograph placeholder"></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<p class="eyebrow">About</p><h2>A student who learns by building.</h2>
+<div class="about" id="aboutBox"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<p class="eyebrow">Featured Projects</p><h2>Three things I’m working on and learning from.</h2>
+<div class="cards" id="cards"></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<p class="eyebrow">Skills &amp; Tools</p><h2>What I work with.</h2>
+<div class="skills" id="skillsBox"></div>
+</div></section>
+
+<section id="education"><div class="wrap">
+<p class="eyebrow">Education &amp; Certifications</p><h2>Where I’m studying.</h2>
+<div class="tl" id="tl"></div>
+</div></section>
+
+<section id="activities"><div class="wrap">
+<p class="eyebrow">Activities &amp; Experience</p><h2>Beyond the classroom.</h2>
+<div class="tl" id="act"></div>
+<div class="soon" id="soon"></div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+<p class="eyebrow">Contact</p><h2 id="cHead"></h2>
+<div class="row" id="cBtns"></div>
+<div class="links" id="cLinks"></div>
+</div></section>
+</main>
+
+<footer><div class="wrap" id="foot"></div></footer>
+<dialog id="dlg" aria-labelledby="dTitle"><div class="dc" id="dBody"></div></dialog>
+
+<script>
+/* ============ EDIT YOUR CONTENT HERE ============ */
+const SITE = {
+  name: "Nikhil K",
+  headline: ["Engineering.", "Technology.", "Business."],
+  intro: "I’m a Mechanical Engineering student interested in building practical solutions at the intersection of engineering, technology and business.",
+  email: "k.nikhil4327@gmail.com",
+  linkedin: "https://linkedin.com/in/nikhil-k-83ba7a367",
+  github: "https://github.com/knikhil4327",
+  resume: "assets/resume.pdf",          // replace assets/resume.pdf with your own PDF
+  photo: "",                     // e.g. "assets/profile.jpg"
+  about: [
+    "I’m a Mechanical Engineering student at Rajalakshmi Institute of Technology, Chennai, still early in my journey and keen to learn by making things.",
+    "Mechanical design is my foundation, but I’m drawn to electronics, software and robotics because most real products need all of them. I like understanding a problem first, then building something practical to solve it.",
+    "I’m also curious about how products and businesses come together, from startup operations to strategy. I learn best hands-on, and I’m happy to explore a new discipline when a project needs it."
+  ],
+  projects: [
+    { id:"medfinder", title:"MedFinder", status:"Concept / In Progress", image:"",
+      blurb:"A medicine availability platform intended to connect pharmacies and patients in Chennai.",
+      about:"MedFinder is intended to help patients find out which nearby pharmacies have a medicine in stock, and give pharmacies a way to share availability. It is a project I’m developing and learning from.",
+      focus:["Medicine availability challenges","Pharmacy and patient connectivity","Application development","Database integration"] },
+    { id:"mecanum", title:"Mecanum Wheel Robot", status:"Academic Project", image:"",
+      blurb:"An autonomous navigation system developed as part of an academic project.",
+      about:"An academic project exploring how a mecanum-wheeled robot can move and navigate on its own, covering mechanical design through to electronics and control.",
+      focus:["SolidWorks CAD design","Embedded electronics","Motor control","Autonomous navigation","Obstacle avoidance"] },
+    { id:"swagat", title:"Swagat Collections", status:"Prototype", image:"",
+      blurb:"An e-commerce prototype focused on premium jewellery and accessories.",
+      about:"A prototype exploring how premium jewellery and accessories could be presented online. It is a design and business-concept exercise and has not been launched.",
+      focus:["Product presentation","E-commerce experience","Interface design","Business concept development"] }
+  ],
+  skills: {
+    Engineering:["SolidWorks","CAD design","Mechanical fundamentals"],
+    Technology:["Python","MySQL","Embedded electronics","Robotics fundamentals"],
+    Business:["Project coordination","Problem-solving","Startup fundamentals","Business research"]
+  },
+  education: [
+    { when:"2025 – 2029", title:"B.E. Mechanical Engineering", where:"Rajalakshmi Institute of Technology, Chennai" },
+    { when:"Certification", title:"Electronic Systems", where:"IIT Madras" }
+  ],
+  activities: [
+    { when:"Event leadership", title:"Expedition event team lead", where:"Led a team for the Expedition event." },
+    { when:"Membership", title:"Green Engineering Club", where:"Member." }
+  ],
+  activitiesNote: "Internships and professional experience will be added here as they happen."
+};
+/* ================================================ */
+
+const $=id=>document.getElementById(id);
+const ext=u=>u.startsWith("http")?' target="_blank" rel="noopener noreferrer"':"";
+const ph=t=>`<div class="thumb">${t}</div>`;
+
+$("navList").innerHTML=[["about","About"],["projects","Projects"],["skills","Skills"],["education","Education"],["activities","Activities"],["contact","Contact"]]
+  .map(([i,l])=>`<li><a href="#${i}">${l}</a></li>`).join("");
+const nav=$("nav"),mb=$("menuBtn");
+mb.onclick=()=>{const o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",o)};
+nav.addEventListener("click",e=>{if(e.target.tagName==="A"){nav.classList.remove("open");mb.setAttribute("aria-expanded","false")}});
+
+$("hName").textContent=SITE.name+" · Mechanical Engineering student";
+$("hHead").innerHTML=SITE.headline.map((w,i)=>i<2?`<em>${w}</em><br>`:w).join("");
+$("hLead").textContent=SITE.intro;
+$("hBtns").innerHTML=`<a class="btn p" href="#projects">Explore Projects →</a><a class="btn" href="${SITE.resume}" download>Download Resume</a><a class="btn" href="${SITE.linkedin}"${ext(SITE.linkedin)}>LinkedIn ↗</a>`;
+
+$("photo").innerHTML=`<svg viewBox="0 0 400 500" fill="none" stroke="#c5e063" stroke-opacity=".22" aria-hidden="true">
+<circle cx="200" cy="190" r="120"/><circle cx="200" cy="190" r="84"/><circle cx="200" cy="190" r="14"/>
+<path d="M60 190h280M200 50v280" stroke-dasharray="6 6"/>
+<path d="M80 372h240M80 364v16M320 364v16"/><text x="200" y="362" fill="#8d9199" stroke="none" font-size="11" text-anchor="middle" font-family="Inter,sans-serif">Ø 240</text></svg>`
++(SITE.photo?`<img src="${SITE.photo}" alt="Portrait of ${SITE.name}" width="380" height="475">`:`<div class="ph">Your photograph goes here. Set <b>photo</b> in the SITE config (e.g. assets/profile.jpg).</div>`);
+
+$("aboutBox").innerHTML=`<div><p>${SITE.about[0]}</p></div><div><p>${SITE.about[1]}</p><p>${SITE.about[2]}</p></div>`;
+
+$("cards").innerHTML=SITE.projects.map((p,i)=>`<button class="card" data-i="${i}" aria-haspopup="dialog">
+${p.image?`<div class="thumb"><img src="${p.image}" alt="${p.title} screenshot" loading="lazy"></div>`:ph("Project image placeholder")}
+<div class="cb"><span class="num">0${i+1}</span><span class="tag">${p.status}</span><h3>${p.title}</h3><p>${p.blurb}</p><span class="more">View Details →</span></div></button>`).join("");
+
+const dlg=$("dlg");
+$("cards").addEventListener("click",e=>{
+  const b=e.target.closest(".card");if(!b)return;
+  const p=SITE.projects[+b.dataset.i];
+  $("dBody").innerHTML=`<button class="btn x" id="dClose" aria-label="Close">Close ✕</button>
+  <span class="tag">${p.status}</span><h3 id="dTitle">${p.title}</h3><p>${p.about}</p>
+  <h4>Focus Areas</h4><ul>${p.focus.map(f=>`<li>${f}</li>`).join("")}</ul>
+  <h4>Screenshots</h4><div class="shots">${ph("Screenshot 1")}${ph("Screenshot 2")}</div>`;
+  $("dClose").onclick=()=>dlg.close();
+  dlg.showModal();
+});
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+
+$("skillsBox").innerHTML=Object.entries(SITE.skills).map(([k,v])=>`<div class="sk"><h3>${k}</h3><div class="chips">${v.map(s=>`<span>${s}</span>`).join("")}</div></div>`).join("");
+
+const tl=a=>a.map(x=>`<div class="ti"><small>${x.when}</small><h3>${x.title}</h3><p>${x.where}</p></div>`).join("");
+$("tl").innerHTML=tl(SITE.education);
+$("act").innerHTML=tl(SITE.activities);
+$("soon").textContent=SITE.activitiesNote;
+
+$("cHead").textContent="Let’s talk about engineering, products or ideas.";
+$("cBtns").innerHTML=`<a class="btn p" href="mailto:${SITE.email}">Email Me</a><a class="btn" href="${SITE.resume}" download>Download Resume</a>`;
+$("cLinks").innerHTML=[["Email",SITE.email,"mailto:"+SITE.email],["LinkedIn",SITE.linkedin.replace("https://",""),SITE.linkedin],["GitHub",SITE.github.replace("https://",""),SITE.github]]
+  .map(([l,t,h])=>`<a href="${h}"${ext(h)}>${l}<span>${t}</span></a>`).join("");
+$("foot").textContent="© "+new Date().getFullYear()+" "+SITE.name+" · Mechanical Engineering, RIT Chennai";
+</script>
+</body>
+</html>
