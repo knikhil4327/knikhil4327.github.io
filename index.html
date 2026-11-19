@@ -104,12 +104,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
 </div></section>
 
 <section id="about"><div class="wrap">
-<p class="eyebrow">About</p><h2>A student who learns by building.</h2>
+<p class="eyebrow">About</p><h2>Engineering across disciplines.</h2>
 <div class="about" id="aboutBox"></div>
 </div></section>
 
 <section id="projects"><div class="wrap">
-<p class="eyebrow">Featured Projects</p><h2>Three things I’m working on and learning from.</h2>
+<p class="eyebrow">Featured Projects</p><h2>Selected projects and practical work.</h2>
 <div class="cards" id="cards"></div>
 </div></section>
 
@@ -119,12 +119,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
 </div></section>
 
 <section id="education"><div class="wrap">
-<p class="eyebrow">Education &amp; Certifications</p><h2>Where I’m studying.</h2>
+<p class="eyebrow">Education &amp; Certifications</p><h2>Education and selected certifications.</h2>
 <div class="tl" id="tl"></div>
 </div></section>
 
 <section id="activities"><div class="wrap">
-<p class="eyebrow">Activities &amp; Experience</p><h2>Beyond the classroom.</h2>
+<p class="eyebrow">Activities &amp; Experience</p><h2>Leadership, memberships and technical activities.</h2>
 <div class="tl" id="act"></div>
 <div class="soon" id="soon"></div>
 </div></section>
@@ -144,45 +144,52 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-si
 const SITE = {
   name: "Nikhil K",
   headline: ["Engineering.", "Technology.", "Business."],
-  intro: "I’m a Mechanical Engineering student interested in building practical solutions at the intersection of engineering, technology and business.",
+  intro: "Mechanical Engineering student exploring product development across mechanical design, electronics and software, with a strong interest in how technology becomes practical solutions and viable businesses.",
   email: "k.nikhil4327@gmail.com",
   linkedin: "https://linkedin.com/in/nikhil-k-83ba7a367",
   github: "https://github.com/knikhil4327",
-  resume: "assets/resume.pdf",          // replace assets/resume.pdf with your own PDF
-  photo: "",                     // e.g. "assets/profile.jpg"
+  resume: "assets/resume.pdf",
+  photo: "",
   about: [
-    "I’m a Mechanical Engineering student at Rajalakshmi Institute of Technology, Chennai, still early in my journey and keen to learn by making things.",
-    "Mechanical design is my foundation, but I’m drawn to electronics, software and robotics because most real products need all of them. I like understanding a problem first, then building something practical to solve it.",
-    "I’m also curious about how products and businesses come together, from startup operations to strategy. I learn best hands-on, and I’m happy to explore a new discipline when a project needs it."
+    "I’m pursuing a B.E. in Mechanical Engineering at Rajalakshmi Institute of Technology, Chennai. My interests extend across mechanical design, robotics, electronics and software, and I’m keen to understand how these disciplines come together in real-world products.",
+    "Through academic projects and independent development, I’ve explored CAD, embedded systems, programming and application development. I enjoy approaching problems from both an engineering and user perspective — understanding the need, evaluating practical constraints and working towards a useful solution.",
+    "I’m also interested in entrepreneurship, business strategy and operations. My goal is to keep building a broad, practical skill set while learning from collaborative projects, industry experience and opportunities to create value."
   ],
   projects: [
-    { id:"medfinder", title:"MedFinder", status:"Concept / In Progress", image:"",
-      blurb:"A medicine availability platform intended to connect pharmacies and patients in Chennai.",
-      about:"MedFinder is intended to help patients find out which nearby pharmacies have a medicine in stock, and give pharmacies a way to share availability. It is a project I’m developing and learning from.",
-      focus:["Medicine availability challenges","Pharmacy and patient connectivity","Application development","Database integration"] },
-    { id:"mecanum", title:"Mecanum Wheel Robot", status:"Academic Project", image:"",
-      blurb:"An autonomous navigation system developed as part of an academic project.",
-      about:"An academic project exploring how a mecanum-wheeled robot can move and navigate on its own, covering mechanical design through to electronics and control.",
-      focus:["SolidWorks CAD design","Embedded electronics","Motor control","Autonomous navigation","Obstacle avoidance"] },
+    { id:"mecanum", title:"Mecanum Wheel Robot – Autonomous Navigation System", status:"Completed", image:"https://dfimg.dfrobot.com/60d05dcfaa9508d63a414990/community/92e0dbbe2e90d09ff3fcbaa75a9229f5.jpg",
+      blurb:"A four-wheeled mecanum robot developed through the IIT Madras Electronic Systems certification course.",
+      about:"Designed and developed a four-wheeled mecanum robot as part of the Electronic Systems certification course from IIT Madras. The project brought together SolidWorks CAD modelling, embedded electronics and motor-control concepts to demonstrate omnidirectional movement, autonomous navigation and obstacle avoidance. The image shown is a representative mecanum-robot reference, not a photograph of the project prototype.",
+      focus:["SolidWorks CAD modelling","Embedded electronics integration","Motor control","Omnidirectional movement","Autonomous navigation and obstacle avoidance"] },
+    { id:"medfinder", title:"MedFinder", status:"In Development", image:"",
+      blurb:"A medicine availability platform connecting patients with local pharmacies and helping address medicine shortages.",
+      about:"MedFinder is a full-stack application concept focused on connecting patients with local pharmacies that have required medicines in stock. Core application coding and the MySQL database have been completed; the wider application is still under development. The planned workflow includes medicine availability discovery, pharmacy inventory updates and shortage visibility.",
+      focus:["Flutter application development","MySQL database design","Pharmacy and patient connectivity","Medicine inventory and availability","Shortage monitoring"] },
     { id:"swagat", title:"Swagat Collections", status:"Prototype", image:"",
-      blurb:"An e-commerce prototype focused on premium jewellery and accessories.",
-      about:"A prototype exploring how premium jewellery and accessories could be presented online. It is a design and business-concept exercise and has not been launched.",
-      focus:["Product presentation","E-commerce experience","Interface design","Business concept development"] }
+      blurb:"An e-commerce website prototype for a Chennai-based luxury jewellery and accessories boutique.",
+      about:"Designed and developed a functional e-commerce prototype for a Chennai-based luxury jewellery and accessories boutique. The work explored responsive user experience, product catalogue presentation, search and filtering. It remains a prototype and has not been publicly launched.",
+      focus:["Responsive interface design","Product catalogue presentation","Search and filtering","E-commerce experience"] }
   ],
   skills: {
-    Engineering:["SolidWorks","CAD design","Mechanical fundamentals"],
-    Technology:["Python","MySQL","Embedded electronics","Robotics fundamentals"],
-    Business:["Project coordination","Problem-solving","Startup fundamentals","Business research"]
+    "Mechanical Engineering & CAD":["SolidWorks","Autodesk Fusion 360","AutoCAD","Mechanical Design","CNC"],
+    "Engineering Fundamentals":["Thermodynamics","Fluid Mechanics","Heat Transfer","Manufacturing Processes"],
+    "Programming & Data":["Python","SQL","C","NumPy","Pandas","Matplotlib"],
+    "AI & Technology":["Artificial Intelligence","Robotics","Electronics","Full-Stack Development","Prompt Engineering"]
   },
   education: [
-    { when:"2025 – 2029", title:"B.E. Mechanical Engineering", where:"Rajalakshmi Institute of Technology, Chennai" },
-    { when:"Certification", title:"Electronic Systems", where:"IIT Madras" }
+    { when:"2025 – 2029", title:"B.E. Mechanical Engineering", where:"Rajalakshmi Institute of Technology, Chennai · Anna University" },
+    { when:"Certification", title:"Electronic Systems", where:"Code IIT Madras" },
+    { when:"Certification", title:"Steam Power Engineering", where:"NPTEL" },
+    { when:"Certification", title:"I’m AI Sashakt", where:"IndiaAI" }
   ],
   activities: [
-    { when:"Event leadership", title:"Expedition event team lead", where:"Led a team for the Expedition event." },
-    { when:"Membership", title:"Green Engineering Club", where:"Member." }
+    { when:"Membership", title:"Society of Automotive Engineers (SAE)", where:"Member · Chennai" },
+    { when:"Membership", title:"Green Engineering Club", where:"Member · Rajalakshmi Institute of Technology" },
+    { when:"Team Leadership", title:"Expedition 404 (T.A.L.O.S)", where:"Team Lead · Chennai Institute of Technology" },
+    { when:"Recognition", title:"Best Event Conducted Award", where:"The Institution of Green Engineers" },
+    { when:"Technical Event", title:"Techritz 2025 – LogoClash", where:"Rajalakshmi Institute of Technology" },
+    { when:"Robotics Event", title:"Roboyudh 2026 – Line Following Robot", where:"Sathyabama Institute of Science and Technology" }
   ],
-  activitiesNote: "Internships and professional experience will be added here as they happen."
+  activitiesNote: ""
 };
 /* ================================================ */
 
@@ -233,7 +240,7 @@ $("tl").innerHTML=tl(SITE.education);
 $("act").innerHTML=tl(SITE.activities);
 $("soon").textContent=SITE.activitiesNote;
 
-$("cHead").textContent="Let’s talk about engineering, products or ideas.";
+$("cHead").textContent="Open to conversations about engineering, technology, products and business.";
 $("cBtns").innerHTML=`<a class="btn p" href="mailto:${SITE.email}">Email Me</a><a class="btn" href="${SITE.resume}" download>Download Resume</a>`;
 $("cLinks").innerHTML=[["Email",SITE.email,"mailto:"+SITE.email],["LinkedIn",SITE.linkedin.replace("https://",""),SITE.linkedin],["GitHub",SITE.github.replace("https://",""),SITE.github]]
   .map(([l,t,h])=>`<a href="${h}"${ext(h)}>${l}<span>${t}</span></a>`).join("");

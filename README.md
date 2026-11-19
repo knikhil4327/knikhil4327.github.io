@@ -2,6 +2,8 @@
 
 Personal portfolio website. A single static page: no build step, no dependencies, no API keys.
 
+The portfolio content has been updated while preserving the original layout, styling, responsive behaviour, navigation, and project-dialog interactions.
+
 ## Edit your content
 
 Open `index.html` and find the `SITE` object near the bottom of the file. Everything (text, links, projects, skills, education, activities) is edited there.
@@ -37,3 +39,8 @@ git push -u origin main
 ```
 
 Netlify Drop and Vercel also work: just drag the folder in.
+
+
+## Image attribution
+
+The Mecanum Wheel Robot card currently uses a representative mecanum-robot reference image from the DFRobot Maker Community article “Build an Arduino Obstacle Avoiding Car with Mecanum Wheels” (https://community.dfrobot.com/makelog-314315.html). It is explicitly described in the project details as a reference image, not the user’s own prototype. Replace it with a project photograph when available.
